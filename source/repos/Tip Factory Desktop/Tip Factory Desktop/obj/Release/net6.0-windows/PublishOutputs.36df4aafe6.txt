@@ -1,0 +1,32 @@
+C:\TFD\Tip Factory Desktop.exe
+C:\TFD\TFUltraSQLite.db
+C:\TFD\Tip Factory Desktop.dll
+C:\TFD\Tip Factory Desktop.deps.json
+C:\TFD\Tip Factory Desktop.runtimeconfig.json
+C:\TFD\Tip Factory Desktop.dll.config
+C:\TFD\Tip Factory Desktop.pdb
+C:\TFD\Dapper.dll
+C:\TFD\EPPlus.dll
+C:\TFD\Microsoft.Extensions.Configuration.dll
+C:\TFD\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\TFD\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\TFD\Microsoft.Extensions.Configuration.Json.dll
+C:\TFD\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\TFD\Microsoft.Extensions.FileProviders.Physical.dll
+C:\TFD\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\TFD\Microsoft.Extensions.Primitives.dll
+C:\TFD\Microsoft.IO.RecyclableMemoryStream.dll
+C:\TFD\System.Data.SQLite.dll
+C:\TFD\System.Data.SqlClient.dll
+C:\TFD\System.Xml.XPath.XmlDocument.dll
+C:\TFD\runtimes\win-arm64\native\sni.dll
+C:\TFD\runtimes\win-x64\native\sni.dll
+C:\TFD\runtimes\win-x86\native\sni.dll
+C:\TFD\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\TFD\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\TFD\runtimes\win-x64\native\SQLite.Interop.dll
+C:\TFD\runtimes\win-x86\native\SQLite.Interop.dll
+C:\TFD\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\TFD\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\TFD\MainClassLibrary.dll
+C:\TFD\MainClassLibrary.pdb

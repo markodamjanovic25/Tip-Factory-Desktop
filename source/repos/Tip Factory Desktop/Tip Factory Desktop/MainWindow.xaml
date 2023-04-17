@@ -1,0 +1,414 @@
+﻿<Window x:Class="Tip_Factory_Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tip_Factory_Desktop"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        FontFamily="Century Gothic"
+        Title="Tip Factory" Height="450" Width="966">
+    <Window.Resources>
+        <local:OutcomeToColourConverter x:Key="OutcomeToColourConverter"/>
+        <local:PercentageColourConverter x:Key="PercentageColourConverter"/>
+        <local:BetterOddsColourConverter x:Key="BetterOddsColourConverter"/>
+    </Window.Resources>
+    <Grid>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,0,0,-340">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 50">
+                            <StackPanel x:Name="oddsSP" Height="auto" Width="auto" Orientation="Vertical" HorizontalAlignment="Center" Margin="100 0 0 0">
+                                <StackPanel Width="auto" Height="auto" Background="White" Orientation="Horizontal" Margin="5 0 0 0">
+                                    <TextBlock Text="3+" Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5" FontSize="12"/>
+                                    <TextBlock Text="1" Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5" FontSize="12"/>
+                                    <TextBlock Text="X" Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5" FontSize="12"/>
+                                    <TextBlock Text="2" Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5" FontSize="12"/>
+                                </StackPanel>
+                                <StackPanel Width="auto" Height="auto" Background="White" Orientation="Horizontal">
+                                    <TextBox Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="tbOverOdds" Margin="5" FontSize="10" MaxLength="4"/>
+                                    <TextBox Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="tbHomeTeamWinnerOdds" Margin="5" FontSize="10" MaxLength="4"/>
+                                    <TextBox Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="tbDrawOdds" Margin="5" FontSize="10" MaxLength="4"/>
+                                    <TextBox Height="20" Width="25" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="tbAwayTeamWinnerOdds" Margin="5" FontSize="10" MaxLength="4"/>
+                                </StackPanel>
+                                <CheckBox x:Name="cbIgnoreEngland" IsChecked="true">Ignore England</CheckBox>
+                                <CheckBox x:Name="cbShowFourth">4th</CheckBox>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox x:Name="cbPomeriFiks">Pomeri fiks</CheckBox>
+                                    <TextBox x:Name="tbPomeriFiks" Width="30" Margin="10 0 0 0">0.20</TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox x:Name="cbExcludeList">Exclude list</CheckBox>
+                                    <TextBox x:Name="tbExcludeList" Height="20" Width="35" Margin="10 0 0 0"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                                    <Button x:Name="btnGet" Content="GET" Background="#005AA7" Foreground="White" BorderThickness="0" Width="50" Height="25" Click="btnGet_Click"/>
+                                    <Button x:Name="btnClear" Content="Clear" Margin="10 0 0 0" Foreground="Red" BorderThickness="0" Width="50" Height="25" Click="btnClear_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="50 10 0 0">
+                                <StackPanel Orientation="Horizontal" Height="30">
+                                    <CheckBox x:Name="cbEngland1">England1</CheckBox>
+                                    <CheckBox x:Name="cbGermany1">Germany1</CheckBox>
+                                    <CheckBox x:Name="cbSpain1">Spain1</CheckBox>
+                                    <CheckBox x:Name="cbItaly1">Italy1</CheckBox>
+                                    <CheckBox x:Name="cbFrance1">France1</CheckBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0 20 0 0" Height="30">
+                                    <CheckBox x:Name="cbBelgium1">Belgium1</CheckBox>
+                                    <CheckBox x:Name="cbPortugal1">Portugal1</CheckBox>
+                                    <CheckBox x:Name="cbNetherlands1">Netherlands1</CheckBox>
+                                    <CheckBox x:Name="cbAustria1">Austria1</CheckBox>
+                                    <CheckBox x:Name="cbDenmark1">Denmark1</CheckBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0 20 0 0" Height="30">
+                                    <CheckBox x:Name="cbSwitzerland1">Switzerland1</CheckBox>
+                                    <CheckBox x:Name="cbEngland2">England2</CheckBox>
+                                    <CheckBox x:Name="cbEngland3">England3</CheckBox>
+                                    <CheckBox x:Name="cbEngland4">England4</CheckBox>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="50 0 0 0">
+                                <Label Content="Ekipe"></Label>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBox x:Name="tbTeamDomacinFilter" Width="120" KeyDown="SearchByTeam"></TextBox>
+                                    <TextBox x:Name="tbTeamGostFilter" Width="120" Margin="10 0 0 0" KeyDown="SearchByTeam"></TextBox>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock x:Name="tbMatchesCount">Total matches:</TextBlock>
+                        <StackPanel x:Name="matchesSP" Height="auto" Width="auto" Orientation="Vertical">
+                            <StackPanel Orientation="Vertical">
+                                <DataGrid CanUserDeleteRows="true" PreviewKeyDown="Matches_PreviewKeyDown" VerticalGridLinesBrush="Azure" HorizontalGridLinesBrush="LightSkyBlue" CanUserResizeColumns="true" CanUserResizeRows="True" Margin="0 0 0 20" MaxHeight="400" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="matchesDG" AlternatingRowBackground="GhostWhite" CanUserAddRows="False" AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding Path=ListNumber}" Width="100"/>
+                                        <DataGridTextColumn Binding="{Binding Path=Over3GoalsOdds}" Width="30" />
+                                        <DataGridTextColumn Binding="{Binding Path=Teams}" Width="300" Foreground="Blue" />
+                                        <DataGridTextColumn Binding="{Binding Path=HomeTeamHalfGoals}" Width="45" FontSize="21"/>
+                                        <DataGridTextColumn Binding="{Binding Path=AwayTeamHalfGoals}" Width="45" FontSize="21"/>
+                                        <DataGridTextColumn Binding="{Binding Path=HomeTeamTotalGoals}" Width="45" FontSize="21"/>
+                                        <DataGridTextColumn Binding="{Binding Path=AwayTeamTotalGoals}" Width="90" FontSize="21"/>
+                                        <DataGridTextColumn Width="30">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Text" Value="{Binding HomeTeamWinOdds, StringFormat=N2}" />
+                                                    <Setter Property="Background" Value="Transparent" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Width="30">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Text" Value="{Binding DrawWinOdds, StringFormat=N2}" />
+                                                    <Setter Property="Background" Value="Transparent" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Width="300">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Text" Value="{Binding AwayTeamWinOdds, StringFormat=N2}" />
+                                                    <Setter Property="Background" Value="Transparent" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="GG" Binding="{Binding Path=GGWin}" x:Name="colGGWin">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Background" Value="{Binding GGWin, Converter={StaticResource OutcomeToColourConverter}}"/>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="3+" Binding="{Binding Path=Over3Win}" x:Name="colOver3Win">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Background" Value="{Binding Over3Win, Converter={StaticResource OutcomeToColourConverter}}"/>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="D2+" Binding="{Binding Path=HomeOver2Win}" x:Name="colHomeOver2Win">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Background" Value="{Binding HomeOver2Win, Converter={StaticResource OutcomeToColourConverter}}"/>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="G2+" Binding="{Binding Path=AwayOver2Win}" x:Name="colAwayOver2Win">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Background" Value="{Binding AwayOver2Win, Converter={StaticResource OutcomeToColourConverter}}"/>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="1+1" Binding="{Binding Path=OnePlusOneWin}" x:Name="colOnePlusOneWin">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Background" Value="{Binding OnePlusOneWin, Converter={StaticResource OutcomeToColourConverter}}"/>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="2+I" Binding="{Binding Path=Over2FirstHalfWin}" x:Name="colOver2FirstHalfWin">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Background" Value="{Binding Over2FirstHalfWin, Converter={StaticResource OutcomeToColourConverter}}"/>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="2+II" Binding="{Binding Path=Over2SecondHalfWin}" x:Name="Over2SecondHalfWin">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="Background" Value="{Binding Over2SecondHalfWin, Converter={StaticResource OutcomeToColourConverter}}"/>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid x:Name="statsGrid" DataContext="{Binding PercentageCalculator}" Height="auto" Margin="50 0 0 0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- FIRST ROW-->
+                                        <Rectangle Grid.Column="0" Grid.Row="0" Fill="{Binding Path=GGWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="0" Text="GG"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=GGWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="1" Grid.Row="0" Fill="{Binding Path=OnePlusOneWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="0" Text="1+1"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=OnePlusOneWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="2" Grid.Row="0" Fill="{Binding Path=Over3Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="0" Text="3+"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=Over3Wins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="3" Grid.Row="0" Fill="{Binding Path=ZeroToTwoTotalWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="0" Text="0-2"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=ZeroToTwoTotalWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="4" Grid.Row="0" Fill="{Binding Path=GGNOWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="0" Text="NG"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=GGNOWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <!-- SECOND ROW-->
+
+                                        <!--<TextBlock Grid.Column="4" Grid.Row="2" Text="2+Iv2+II"></TextBlock>
+                                <TextBlock Grid.Column="4" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=FirstOrSecondHalfTwoWins, StringFormat=N2}"></TextBlock>-->
+
+                                        <Rectangle Grid.Column="0" Grid.Row="2" Fill="{Binding Path=HomeOver2Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="2" Text="D2+"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=HomeOver2Wins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="2" Grid.Row="2" Fill="{Binding Path=HomeOver3Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="2" Text="D3+"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=HomeOver3Wins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="1" Grid.Row="2" Fill="{Binding Path=AwayOver2Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="2" Text="G2+"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=AwayOver2Wins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="3" Grid.Row="2" Fill="{Binding Path=AwayOver3Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="2" Text="G3+"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=AwayOver3Wins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="4" Grid.Row="2" Fill="{Binding Path=BothTeamsToScoreAndOver3Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="2" Text="GG3+"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=BothTeamsToScoreAndOver3Wins, StringFormat={}{0:F0}}"></TextBlock>
+
+
+
+                                        <!-- THIRD ROW -->
+
+                                        <Rectangle Grid.Column="0" Grid.Row="4" Fill="{Binding Path=OneToTwoFirstHalfWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="4" Text="1-2I"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="5" FontWeight="Bold" Text="{Binding Path=OneToTwoFirstHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="1" Grid.Row="4" Fill="{Binding Path=ZeroToOneSecondHalfWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="4" Text="0-1II"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="5" FontWeight="Bold" Text="{Binding Path=ZeroToOneSecondHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="2" Grid.Row="4" Fill="{Binding Path=OneToTwoSecondHalfWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="4" Text="1-2II"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="5" FontWeight="Bold" Text="{Binding Path=OneToTwoSecondHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="3" Grid.Row="4" Fill="{Binding Path=Over2SecondHalfWins, Converter={StaticResource BetterOddsColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="4" Text="2+II"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="5" FontWeight="Bold" Text="{Binding Path=Over2SecondHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="4" Grid.Row="4" Fill="{Binding Path=TwoToThreeTotalWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="4" Text="2-3"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="5" FontWeight="Bold" Text="{Binding Path=TwoToThreeTotalWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <!-- FOURTH ROW -->
+                                        <Rectangle Grid.Column="0" Grid.Row="6" Fill="{Binding Path=OnePlusTwoWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="6" Text="1+2"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="7" FontWeight="Bold" Text="{Binding Path=OnePlusTwoWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="1" Grid.Row="6" Fill="{Binding Path=TwoPlusTwoWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="6" Text="2+2"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="7" FontWeight="Bold" Text="{Binding Path=TwoPlusTwoWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="2" Grid.Row="6" Fill="{Binding Path=Over4Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="6" Text="4+"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="7" FontWeight="Bold" Text="{Binding Path=Over4Wins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="3" Grid.Row="6" Fill="{Binding Path=Over2FirstHalfWins, Converter={StaticResource BetterOddsColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="6" Text="2+I"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="7" FontWeight="Bold" Text="{Binding Path=Over2FirstHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="4" Grid.Row="6" Fill="{Binding Path=BothTeamsOver2Wins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="6" Text="D2G2"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="4" Grid.Row="7" FontWeight="Bold" Text="{Binding Path=BothTeamsOver2Wins, StringFormat=N{}{0:F0}2}"></TextBlock>
+                                    </Grid>
+                                    <Grid x:Name="statsSecondGrid" DataContext="{Binding PercentageCalculator}" Height="auto" Margin="50 0 0 0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- FIRST ROW -->
+                                        <Rectangle Grid.Column="0" Grid.Row="0" Fill="{Binding Path=HomeOver1FirstHalfWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="0" Text="D1+I"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=HomeOver1FirstHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="1" Grid.Row="0" Fill="{Binding Path=HomeOver1SecondHalfWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="0" Text="D1+II"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=HomeOver1SecondHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="2" Grid.Row="0" Fill="{Binding Path=AwayOver1FirstHalfWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="0" Text="G1+I"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=AwayOver1FirstHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="3" Grid.Row="0" Fill="{Binding Path=AwayOver1SecondHalfWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="0" Text="G1+II"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=AwayOver1SecondHalfWins, StringFormat={}{0:F0}}"></TextBlock>
+                                        <!-- FIRST ROW -->
+
+                                        <!-- SECOND ROW -->
+                                        <Rectangle Grid.Column="0" Grid.Row="2" Fill="{Binding Path=Under2FirstAndOver1SecondWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="2" Text="0-1I 1+II"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="0" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=Under2FirstAndOver1SecondWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="1" Grid.Row="2" Fill="{Binding Path=Over1FirstAndUnder2SecondWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="2" Text="1+I 0-1II"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=Over1FirstAndUnder2SecondWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="2" Grid.Row="2" Fill="{Binding Path=OneToThreeTotalWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="2" Text="1-3"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="2" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=OneToThreeTotalWins, StringFormat={}{0:F0}}"></TextBlock>
+
+                                        <Rectangle Grid.Column="3" Grid.Row="2" Fill="{Binding Path=TwoToFourTotalWins, Converter={StaticResource PercentageColourConverter}}"/>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="2" Text="2-4"></TextBlock>
+                                        <TextBlock TextAlignment="Center" Grid.Column="3" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=TwoToFourTotalWins, StringFormat={}{0:F0}}"></TextBlock>
+                                        <!-- SECOND ROW -->
+                                    </Grid>
+                                    <Grid x:Name="statsSiguriceGrid" DataContext="{Binding PercentageCalculator}" Height="auto">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!--FIRST ROW-->
+                                        <TextBlock Grid.Column="0" Grid.Row="0" Text="0-1I"></TextBlock>
+                                        <TextBlock Grid.Column="0" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=ZeroToOneFirstHalfWins, StringFormat=N2}"></TextBlock>
+
+                                        <TextBlock Grid.Column="1" Grid.Row="0" Text="1+I"></TextBlock>
+                                        <TextBlock Grid.Column="1" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=Over1FirstHalfWins, StringFormat=N2}"></TextBlock>
+
+                                        <TextBlock Grid.Column="2" Grid.Row="0" Text="1+II"></TextBlock>
+                                        <TextBlock Grid.Column="2" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=Over1SecondHalfWins, StringFormat=N2}"></TextBlock>
+
+                                        <TextBlock Grid.Column="3" Grid.Row="0" Text="1-3I"></TextBlock>
+                                        <TextBlock Grid.Column="3" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=OneToThreeFirstHalfWins, StringFormat=N2}"></TextBlock>
+
+                                        <TextBlock Grid.Column="4" Grid.Row="0" Text="1-3II"></TextBlock>
+                                        <TextBlock Grid.Column="4" Grid.Row="1" FontWeight="Bold" Text="{Binding Path=OneToThreeSecondHalfWins, StringFormat=N2}"></TextBlock>
+
+                                        <!--FIRST ROW-->
+
+                                        <!--SECOND ROW-->
+                                        <TextBlock Grid.Column="0" Grid.Row="2" Text="2+"></TextBlock>
+                                        <TextBlock Grid.Column="0" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=Over2TotalWins, StringFormat=N2}"></TextBlock>
+
+
+                                        <TextBlock Grid.Column="2" Grid.Row="2" Text="2-5"></TextBlock>
+                                        <TextBlock Grid.Column="2" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=TwoToFiveTotalWins, StringFormat=N2}"></TextBlock>
+
+                                        <TextBlock Grid.Column="3" Grid.Row="2" Text="2-6"></TextBlock>
+                                        <TextBlock Grid.Column="3" Grid.Row="3" FontWeight="Bold" Text="{Binding Path=TwoToSixTotalWins, StringFormat=N2}"></TextBlock>
+
+                                        <!--SECOND ROW-->
+
+                                        <!--THIRD ROW-->
+
+                                        <!--THIRD ROW-->
+
+                                        <!--FOURTH ROW -->
+                                        <TextBlock Grid.Column="0" Grid.Row="4" Text="0-1"></TextBlock>
+                                        <TextBlock Grid.Column="0" Grid.Row="5" FontWeight="Bold" Text="{Binding Path=ZeroToOneTotalWins, StringFormat=N2}"></TextBlock>
+
+
+
+                                        <TextBlock Grid.Column="1" Grid.Row="4" Text="0-3"></TextBlock>
+                                        <TextBlock Grid.Column="1" Grid.Row="5" FontWeight="Bold" Text="{Binding Path=ZeroToThreeTotalWins, StringFormat=N2}"></TextBlock>
+
+
+                                        <!--FOURTH ROW -->
+
+                                    </Grid>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+    </Grid>
+</Window>

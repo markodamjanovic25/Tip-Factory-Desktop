@@ -1,0 +1,55 @@
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Tip Factory Desktop.exe
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Tip Factory Desktop.deps.json
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Tip Factory Desktop.runtimeconfig.json
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Tip Factory Desktop.runtimeconfig.dev.json
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Tip Factory Desktop.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Tip Factory Desktop.pdb
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.csproj.AssemblyReference.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop_MarkupCompile.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop_MarkupCompile.lref
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.g.resources
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.AssemblyInfoInputs.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.AssemblyInfo.cs
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.csproj.CopyComplete
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.pdb
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.genruntimeconfig.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\EPPlus.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\MainClassLibrary.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\MainClassLibrary.pdb
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip_Factory_Desktop.Properties.Resources.resources
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop.csproj.GenerateResource.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Tip Factory Desktop.dll.config
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\Dapper.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\obj\Debug\netcoreapp3.1\Tip Factory Desktop_Content.g.cs
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\TFUltraSQLite.db
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll

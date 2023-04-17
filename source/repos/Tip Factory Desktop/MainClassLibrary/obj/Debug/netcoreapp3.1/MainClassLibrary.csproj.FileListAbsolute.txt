@@ -1,0 +1,9 @@
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\bin\Debug\netcoreapp3.1\MainClassLibrary.deps.json
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\bin\Debug\netcoreapp3.1\MainClassLibrary.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\bin\Debug\netcoreapp3.1\MainClassLibrary.pdb
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Debug\netcoreapp3.1\MainClassLibrary.csproj.AssemblyReference.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Debug\netcoreapp3.1\MainClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Debug\netcoreapp3.1\MainClassLibrary.AssemblyInfo.cs
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Debug\netcoreapp3.1\MainClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Debug\netcoreapp3.1\MainClassLibrary.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Debug\netcoreapp3.1\MainClassLibrary.pdb

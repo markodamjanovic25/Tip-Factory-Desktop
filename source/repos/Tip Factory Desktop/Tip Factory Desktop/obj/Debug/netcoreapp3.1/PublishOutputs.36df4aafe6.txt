@@ -1,0 +1,22 @@
+C:\TFD\Tip Factory Desktop.exe
+C:\TFD\Tip Factory Desktop.dll
+C:\TFD\Tip Factory Desktop.deps.json
+C:\TFD\Tip Factory Desktop.runtimeconfig.json
+C:\TFD\Tip Factory Desktop.pdb
+C:\TFD\EPPlus.dll
+C:\TFD\Microsoft.Extensions.Configuration.dll
+C:\TFD\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\TFD\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\TFD\Microsoft.Extensions.Configuration.Json.dll
+C:\TFD\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\TFD\Microsoft.Extensions.FileProviders.Physical.dll
+C:\TFD\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\TFD\Microsoft.Extensions.Primitives.dll
+C:\TFD\Microsoft.IO.RecyclableMemoryStream.dll
+C:\TFD\System.Text.Encoding.CodePages.dll
+C:\TFD\System.Xml.XPath.XmlDocument.dll
+C:\TFD\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\TFD\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\TFD\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\TFD\MainClassLibrary.dll
+C:\TFD\MainClassLibrary.pdb

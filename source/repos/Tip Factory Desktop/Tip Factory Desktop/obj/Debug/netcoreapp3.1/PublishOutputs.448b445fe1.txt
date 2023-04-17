@@ -1,0 +1,22 @@
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Tip Factory Desktop.exe
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Tip Factory Desktop.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Tip Factory Desktop.deps.json
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Tip Factory Desktop.runtimeconfig.json
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Tip Factory Desktop.pdb
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\EPPlus.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.Primitives.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\System.Text.Encoding.CodePages.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\System.Xml.XPath.XmlDocument.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\MainClassLibrary.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\Tip Factory Desktop\bin\Debug\netcoreapp3.1\publish\MainClassLibrary.pdb

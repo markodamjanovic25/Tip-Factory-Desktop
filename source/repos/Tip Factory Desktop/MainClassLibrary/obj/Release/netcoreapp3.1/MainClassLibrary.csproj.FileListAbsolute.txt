@@ -1,0 +1,10 @@
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\bin\Release\netcoreapp3.1\MainClassLibrary.deps.json
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\bin\Release\netcoreapp3.1\MainClassLibrary.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\bin\Release\netcoreapp3.1\MainClassLibrary.pdb
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Release\netcoreapp3.1\MainClassLibrary.csproj.AssemblyReference.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Release\netcoreapp3.1\MainClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Release\netcoreapp3.1\MainClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Release\netcoreapp3.1\MainClassLibrary.AssemblyInfo.cs
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Release\netcoreapp3.1\MainClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Release\netcoreapp3.1\MainClassLibrary.dll
+C:\Users\Marko\source\repos\Tip Factory Desktop\MainClassLibrary\obj\Release\netcoreapp3.1\MainClassLibrary.pdb
